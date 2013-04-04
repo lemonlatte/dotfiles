@@ -6,14 +6,19 @@ export LSCOLORS=Gxfxbxdxcxegedabagacad
 # Set terminal tab title
 export PROMPT_COMMAND='echo -ne "\\033]0;${PWD/#$HOME/~}\\007"'
 
-# Set autocompletion of python 
-# Don't forget to install readlines module of python
+# Set autocompletion of Python
+# Don't forget to install readlines module of Python
 export PYTHONSTARTUP="/Users/jimyeh/.pyrc"
 
-# export PYTHONPATH="/usr/local/lib/python:${PYTHONPATH}"
+# Add python library of system object
+# export PYTHONPATH="${PYTHONPATH}:/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python"
 
 # Setting PATH for Brew
-export PATH="/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/bin:/usr/local/sbin:${PATH}"
+export PATH="/usr/local/bin:/usr/local/sbin:${PATH}"
+# Setting PATH for Python
+export PATH="/usr/local/share/python:${PATH}"
+# Setting PATH for Ruby and Node.js
+export PATH="/usr/local/opt/ruby/bin:/usr/local/share/npm/bin:${PATH}"
 
 # Settings for enable eight-bit input and out
 # It seems that it has no effect in OSX
