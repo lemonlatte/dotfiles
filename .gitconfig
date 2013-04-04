@@ -1,0 +1,18 @@
+[user]
+	name = Jim Yeh
+	email = lemonlatte@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+[branch]
+	autosetuprebase = always
+[core]
+	excludesfile = /Users/jimyeh/.gitignore
+	quotepath = false
+	ignorecase = false
+[mergetool]
+	keepBackup = true
+[push]
+	default = current
