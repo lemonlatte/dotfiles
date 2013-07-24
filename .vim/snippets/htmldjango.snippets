@@ -1,0 +1,14 @@
+snippet for
+	{% for ${1:needle} in ${2:haystack} %}
+		${3:# code...}
+	{%% endfor %}
+snippet if 
+	{% if ${1:stat} %}
+		${2:# code...}
+	{% endif %}
+snippet bl
+	{% block ${1:name} %}${2:content}{% endblock %}${3}
+snippet ext
+	{% extends '${1:temp.html}' %}${2}
+snippet inc
+	{% include '${1:include.html}' %}${2}
