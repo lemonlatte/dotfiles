@@ -4,8 +4,10 @@
 [color]
 	diff = auto
 	status = auto
+	interactive = auto
 	branch = auto
 	log = auto
+	ui = auto
 [branch]
 	autosetuprebase = always
 [core]

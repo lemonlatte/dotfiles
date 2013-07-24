@@ -24,3 +24,10 @@ egrep "^export " ~/.bash_profile | while read e
 	set -xg $var $value
 end
 
+set -xg EDITOR 'subl -w'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias cleanpyc='find . -name \*.pyc -delete'
+alias gitst='git status'
+alias gitsppp='git stash;git pull --rebase;git push;git stash pop'
