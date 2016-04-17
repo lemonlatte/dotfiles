@@ -24,4 +24,7 @@ bell off
 bell_msg "Bell in window %n^G"
 startup_message off
 
+# 利用 ALT + Left, Right 來切換 Tab
+bindkey [1;9D prev
+bindkey [1;9C next
 # escape "^AA"
