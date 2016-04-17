@@ -1,0 +1,71 @@
+function fish_prompt -d "Prompt in Fish Shell"
+
+    set -xg VIRTUAL_ENV_DISABLE_PROMPT 1
+
+    set -l dot (echo -e "\xE2\x80\xA2")
+    # set -l dot (echo -e "\xE2\xAC\xA4") # Big circle
+
+    function label_triangle -d "Print first sign of label"
+
+        set -l triangle (echo -e "\xE2\x96\xB6")
+        if test (echo $argv | wc -w) -eq 2
+            echo $argv[1]
+        end
+    end
+
+    set -l cyan (set_color cyan)
+    set -l yellow (set_color yellow)
+    set -l red (set_color -o red)
+    set -l green (set_color -o green)
+    set -l blue (set_color blue)
+    set -l magenta (set_color -o magenta)
+    set -l normal (set_color normal)
+
+    set -l venv_bg (set_color -b blue white)
+    set -l venv_name (basename "$VIRTUAL_ENV")
+
+    set -l test_env_bg (set_color -b DF6212 cbcbcb)
+
+    set -l TITLE "┌─ " (whoami)
+
+    if set -q VIRTUAL_ENV
+        set VENV_INFO " $venv_bg($venv_name)$normal"
+    end
+
+    if test $WEBPY_ENV -a $WEBPY_ENV = "test"
+        set TEST_ENV_INFO "$test_env_bg TEST_ENV $normal"
+    end
+
+    if test -d ".git"
+
+        set -l git_state (git branch | grep "*" | cut -d' ' -f2)
+
+        set GIT_INFO "$magenta git:$yellow($git_state$green $dot"
+
+        git diff-index --quiet HEAD
+        if test $status != 0
+            set GIT_INFO $GIT_INFO $red
+        end
+
+        set GIT_INFO $GIT_INFO $dot
+
+        set GIT_INFO $GIT_INFO $yellow ")"
+    end
+
+    if [ $NVM_PATH ]
+        set NVM_CURRNET " $cyan(" (echo $NVM_PATH | awk -F "/" '{printf "%s-%s", $6, $7}') ")$normal"
+    end
+
+    echo -n -s $TITLE $VENV_INFO $TEST_ENV_INFO $GIT_INFO $NVM_CURRNET
+
+    set FIRST_LINE_LEN (expr $COLUMNS - (echo $FIRST_LINE | wc -c | tr -s " " | cut -d ' ' -f2-) + 10)
+
+    set_color normal
+    # for i in (seq (expr $COLUMNS / 2)); echo -n -e "─"; end
+    echo ""
+    echo -n "└─ "
+    set_color $fish_color_cwd
+    echo -n (prompt_pwd)
+    set_color normal
+    echo -n -e " $red➜ $normal "
+end
