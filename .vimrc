@@ -50,4 +50,7 @@ vnoremap <silent> <C-c> :w !pbcopy<CR><CR>
 nmap <F7> :NERDTreeTabsToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
+map <C-l> :tabn<CR>
+map <C-h> :tabp<CR>
+
 nnoremap <Leader>u :Unite file_rec<CR>
