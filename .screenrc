@@ -5,6 +5,8 @@
 caption always "%{wK} %=|%{Wb}%-w%{Yr}%n*%t%{Wb}%+w%{wK}|%= "
 hardstatus alwayslastline "%= %= %{Y}(%H) $OS $PUBLIC_ADDRESS %{R}%e %{R} %l %{wb} %Y/%m/%d %c"
 
+term "screen-256color"
+
 # 設定預設的文字編碼
 defencoding utf8
 

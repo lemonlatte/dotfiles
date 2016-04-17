@@ -1,7 +1,12 @@
 syntax enable
 set nu
 
+set t_Co=256
 colorscheme molokai
+" Fix the background color grayed out issue according to:
+" http://stackoverflow.com/questions/4325682/vim-colorschemes-not-changing-background-color
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
 
 " Set command line tab menu
 set wildmenu
