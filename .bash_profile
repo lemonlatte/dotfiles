@@ -18,7 +18,7 @@ export PYTHONSTARTUP="/Users/jimyeh/.pyrc"
 # export PYTHONPATH="$PYTHONPATH:/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python"
 
 # Set PATH for Brew
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="$HOME/.linuxbrew/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 
 # Set Default Vagrant Provider
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
@@ -29,7 +29,7 @@ export PATH="$ANDROID_HOME/tools:$PATH"
 
 # Set Path for Go
 export GOPATH=$HOME/.go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:/usr/local/go/bin:$GOPATH/bin
 
 # Set NVM Directory
 export NVM_DIR=~/.nvm
