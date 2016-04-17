@@ -13,8 +13,9 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/vim-easy-align'
 Plug 'tomtom/tcomment_vim'
+Plug 'MarcWeber/vim-addon-mw-utils' " dependency for snipmate
+Plug 'tomtom/tlib_vim' " dependency for snipmate
 Plug 'garbas/vim-snipmate'
-Plug 'MarcWeber/vim-addon-mw-utils' " for snipmate
 Plug 'honza/vim-snippets'
 " Git integration
 Plug 'tpope/vim-fugitive'
