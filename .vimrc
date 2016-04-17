@@ -8,6 +8,8 @@ colorscheme molokai
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
+set vb t_vb=
+
 " Set command line tab menu
 set wildmenu
 " Show your insert point at the right of command line

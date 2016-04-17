@@ -19,9 +19,9 @@ bind u encoding utf8 utf8
 defscrollback 2048
 
 vbell off
-vbell_msg "Ding Ding!!"
+vbell_msg ""
 bell off
-bell_msg "Bell in window %n^G"
+bell_msg ""
 startup_message off
 
 # 利用 ALT + Left, Right 來切換 Tab
