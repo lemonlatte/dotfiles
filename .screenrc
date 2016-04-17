@@ -1,0 +1,25 @@
+# 設定每個視窗的標題
+# exec sh -c 'screen -X setenv OS "`uname -sr`"'
+
+# 設定總是顯示 screen 的狀態列
+caption always "%{wK} %=|%{Wb}%-w%{Yr}%n*%t%{Wb}%+w%{wK}|%= "
+hardstatus alwayslastline "%= %= %{Y}(%H) $OS $PUBLIC_ADDRESS %{R}%e %{R} %l %{wb} %Y/%m/%d %c"
+
+# 設定預設的文字編碼
+defencoding utf8
+
+# 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind b encoding big5 utf8 # convert big5 to utf8
+# C-a u 後切回可以直看 utf-8 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind u encoding utf8 utf8
+
+# 設定視窗回捲時可看到的行數
+defscrollback 2048
+
+vbell off
+vbell_msg "Ding Ding!!"
+bell off
+bell_msg "Bell in window %n^G"
+startup_message off
+
+# escape "^AA"
