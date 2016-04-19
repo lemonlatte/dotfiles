@@ -36,6 +36,8 @@ set nobackup
 " Save a backup before a document closed
 set writebackup
 
+set shell=/bin/bash
+
 source ~/.vim/plug.vim
 source ~/.vim/go.vim
 " source ~/.vim/neobundle.vim
