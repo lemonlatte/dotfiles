@@ -10,7 +10,7 @@ term "screen-256color"
 # 設定預設的文字編碼
 defencoding utf8
 
-maptimeout 0
+maptimeout 10
 
 # 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
 bind b encoding big5 utf8 # convert big5 to utf8

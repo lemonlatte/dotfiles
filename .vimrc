@@ -41,10 +41,15 @@ set shell=/bin/bash
 source ~/.vim/plug.vim
 source ~/.vim/go.vim
 " source ~/.vim/neobundle.vim
-source ~/.vim/deoplete-go.vim
+if has("nvim")
+  source ~/.vim/deoplete-go.vim
+else
+  source ~/.vim/neocomplete.vim
+endif
+
 source ~/.vim/nerdtab.vim
 source ~/.vim/airline.vim
-source ~/.vim/syntastic.vim
+" source ~/.vim/syntastic.vim
 
 nnoremap <silent> <C-c> :.w !pbcopy<CR><CR>
 vnoremap <silent> <C-c> :w !pbcopy<CR><CR>
@@ -52,7 +57,5 @@ vnoremap <silent> <C-c> :w !pbcopy<CR><CR>
 nmap <F7> :NERDTreeTabsToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
-map <C-l> :tabn<CR>
-map <C-h> :tabp<CR>
-
 nnoremap <Leader>u :Unite file_rec<CR>
+
